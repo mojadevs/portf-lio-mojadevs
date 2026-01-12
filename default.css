@@ -535,6 +535,8 @@ section {
     .cards-projects {
         width: 100%;
         margin: 0 auto;
+        display: flex;
+        flex-flow: column;
     }
     
     .card {
@@ -552,6 +554,10 @@ section {
 
 /* Ajuste dos blobs para responsivo */
 @media (max-width: 768px) {
+    .name-logo{
+        margin-right: 40px;
+    }
+    
     .blob {
         position: absolute;
         width: 120vw;
@@ -561,6 +567,7 @@ section {
         overflow: hidden;
     }
     
+
     .blob-1 {
         transform: translateX(-50%) rotate(-18deg) scale(0.8);
     }
