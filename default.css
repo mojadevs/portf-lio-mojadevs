@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #2196f3;
+    --background-color-primary: #daff48;
+    --background-color-secondary: #f3f2f2;
+    --background-color-tertiary: rgba(120,67,233,0.2);
+    --paragraph-color: white;
+    --titles-color:  white;
+    font-size: 62.5%;
+}
+
+body{
+    color: var(--titles-color);
+    font-family: "Source Sans 3", sans-serif;
+    font-style: normal;
+    font-weight: 900;  
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 9rem;
+    line-height: 1.2;
+    color: var(--titles-color);
+    text-align: center;
+}
+
+h2{
+    font-size : 4.209rem;
+    line-height : 1.3;
+}
+
+h3{
+    font-size: 3.157rem;
+    line-height: 1.4;
+}
+
+p, 
+li, 
+a{
+    font-size: 1.777rem;
+    line-height: 1.7;
+    font-weight: 600;
+    list-style: none;
+}
+
+
+a:hover{
+    color: var(--background-color-primary);
+}
+
+div.container{
+    width: 125rem;
+    margin: auto;
+}
+
+div.subtitle{
+    display: flex;
+    gap: 3.157rem;
+    flex-flow: column;
+    align-items: center;
+
+    & > h2{
+        padding: 1.44rem;
+        position: relative;
+
+        &::after{
+            content: ""; 
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%); 
+            width: 13.5%; 
+            border-bottom: 0.45rem solid var(--color-primary);
+        }
+    }
+
+    & > p{
+        text-align: center;
+    }
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    padding: 10rem 0;
+    height: 100vh;
+    background-color: black;
+}
+
+span.color{
+    color: var(--background-color-primary);
+}
+
+.hero{
+    height: calc(100vh - 90px);
+}
+
+.hero p{
+    width: 70rem;
+    color: white;
+    text-align: center;
+}
+
+a.button{
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 1.777rem 4.209rem;
+    font-weight: 800;
+    border: 0.1rem solid white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 1000; 
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+.max-h{
+    height: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.gap{
+    gap: 5rem;
+}
+
+.column{
+    flex-flow: column;
+}
+
+.rows{
+    flex-flow: row;
+}
+
+.center{
+    align-items: center;
+    justify-content : center;
+}
+
+/* Adicione isso no final do arquivo default.css */
+/* Forma orgânica */
+.blob {
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    filter: blur(180px);
+    opacity: 0.9;
+    transform: rotate(-12deg);
+        mix-blend-mode: screen;
+}
+
+/* Azul principal */
+.blob-1 {
+    background: conic-gradient(
+        from 90deg,
+        #003cff,
+        #00aaff,
+        #003cff,
+        transparent
+    );
+    transform: scaleX(0.9) scaleY(1.1) rotate(-18deg);
+}
+
+/* Azul escuro */
+.blob-2 {
+    background: linear-gradient(60deg,
+        #00398f 0%,
+        #000814 60%,
+        transparent 80%
+    );
+    bottom: -15%;
+    right: -5%;
+}
+
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
+header{
+    background-color: black;
+    padding: 4.5rem;
+}
+
+
+.header-list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.sections-list{
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+}
+
+.politica-desenvolvimento {
+    padding: 10rem 2rem;
+    color: #fff;
+}
+
+.politica-desenvolvimento .content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.35fr; /* texto um pouco maior */
+    gap: 6rem;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    align-items: start;
+    height: 100%;
+}
+
+/* TEXTO */
+.title h2 {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.title p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #cbd5f5;
+}
+
+/* CARDS */
+.cards-projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    min-height: 300px; /* cards GRANDES */
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+}
+
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-8px) rotate(-6deg);
+    box-shadow: 0 30px 60px rgba(0,0,0,.35);
+    background-color: var(--background-color-primary);
+    color: black;
+}
+
+section.sobre{
+    height: 100vh;
+}
+
+section .content{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.quem-somos{
+    height: 100%;
+    display: flex;
+    flex-flow: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.quem-somos p{
+    text-align: center;
+    width: 70rem;
+}
+
+.emoji{
+    position: absolute;
+    font-size: 20rem; 
+}
+
+.emoji-1{
+    left: 40px;
+    top: 50px;
+    transform: rotate(-20deg)
+}
+
+.emoji-2{
+    right: 40px;
+    top: 50px;
+    transform: rotate(20deg)
+}
+
+
+/* RESPONSIVO */
+/* RESPONSIVIDADE */
+
+/* Tablets grandes e laptops pequenos */
+@media (max-width: 1300px) {
+    div.container {
+        width: 95%;
+        max-width: 1200px;
+    }
+    
+    h1 {
+        font-size: 7rem;
+    }
+    
+    .politica-desenvolvimento .content {
+        max-width: 95%;
+        gap: 4rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    :root {
+        font-size: 55%;
+    }
+    
+    h1 {
+        font-size: 6rem;
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+    
+    h3 {
+        font-size: 2.8rem;
+    }
+    
+    section {
+        padding: 8rem 0;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: calc(100vh - 90px);
+    }
+    
+    .hero p {
+        width: 90%;
+        max-width: 600px;
+    }
+    
+    /* Política de desenvolvimento - layout colunar */
+    .politica-desenvolvimento .content {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+    
+    .title {
+        text-align: center;
+    }
+    
+    .title h2 {
+        font-size: 3.2rem;
+    }
+    
+    .emoji {
+        font-size: 15rem;
+    }
+    
+    .emoji-1 {
+        left: 20px;
+        top: 30px;
+    }
+    
+    .emoji-2 {
+        right: 20px;
+        top: 30px;
+    }
+    
+    .quem-somos p {
+        width: 90%;
+        max-width: 700px;
+    }
+}
+/* Ajustes para borda branca */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    .content, 
+    .politica-desenvolvimento .content,
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .politica-desenvolvimento .content {
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    * {
+        max-width: 100vw;
+    }
+    
+    .content, 
+    .politica-desenvolvimento .content,
+    .container {
+        padding: 0 15px;
+    }
+    
+    .politica-desenvolvimento .content {
+        max-width: calc(100% - 30px);
+    }
+    
+    /* Garantir que nenhum elemento escape */
+    .blob {
+        max-width: 100vw;
+        left: 50%;
+        transform: translateX(-50%) rotate(-12deg);
+    }
+    
+    .emoji {
+        max-width: 20vw;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    .content, 
+    .politica-desenvolvimento .content,
+    .container {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    .politica-desenvolvimento .content {
+        max-width: calc(100% - 20px);
+    }
+    
+    /* Ajuste fino para blobs */
+    .blob {
+        width: 100vw;
+        height: 60vw;
+        left: 0;
+        transform: rotate(-12deg);
+        transform-origin: center;
+    }
+    
+    /* Corrigir overflow horizontal */
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    section {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    /* Reset de transformações problemáticas */
+    .card:hover {
+        transform: translateY(-8px) rotate(-6deg);
+        transform-origin: center;
+    }
+}
+
+/* Adicione isso no início do CSS para prevenir overflow desde o início */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Ajuste adicional para o container principal */
+.container {
+    width: 100%;
+    max-width: 125rem;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Correção específica para overflow dos cards em mobile */
+@media (max-width: 768px) {
+    .cards-projects {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Prevenir rotação excessiva em mobile */
+    .card:hover {
+        transform: translateY(-8px) rotate(-3deg);
+    }
+}
+
+/* Ajuste dos blobs para responsivo */
+@media (max-width: 768px) {
+    .blob {
+        position: absolute;
+        width: 120vw;
+        height: 50vh;
+        left: 50%;
+        transform: translateX(-50%) rotate(-12deg);
+        overflow: hidden;
+    }
+    
+    .blob-1 {
+        transform: translateX(-50%) rotate(-18deg) scale(0.8);
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .blob {
+        width: 150vw;
+        height: 40vh;
+    }
+    
+    /* Garantir que blobs não criem scroll horizontal */
+    .hero {
+        position: relative;
+        overflow: hidden;
+    }
+}
